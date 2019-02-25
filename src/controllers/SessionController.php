@@ -8,14 +8,12 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 class SessionController extends Controller {
-    /**
-     * @OA\Info(title="My First API", version="0.1")
-     */
-
+    
     /**
      * @OA\Get(
-     *     path="/api/resource.json",
-     *     @OA\Response(response="200", description="An example resource")
+     *     path="/session",
+     *     summary="Get user session",
+     *     @OA\Response(response="200", description="Session information")
      * )
      */
     public function get_session(Request $request, Response $response, array $args) {

@@ -30,15 +30,10 @@ $container['SessionController'] = function($container) {
     return new \App\Controllers\SessionController($container);
 };
 
-require_once __DIR__ . '/../src/routes.php';
+$container['SwaggerController'] = function($container) {
+    return new \App\Controllers\SwaggerController($container);
+};
 
-// Common route for /swagger
-$app->get('/swagger', function(Request $request, Response $response, array $args) {    
-    $openapi = \OpenApi\scan(__DIR__ . '/../src');
-    header('Content-Type: application/x-yaml');
-    return $response
-        ->withAddedHeader('Content-Type', 'application/json')
-        ->write($openapi->toJson());
-});
+require_once __DIR__ . '/../src/routes.php';
 
 $app->run();
