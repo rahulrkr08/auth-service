@@ -23,7 +23,7 @@ final class Cloudant {
 
 	private static $inst = null;
     private $sag;
-		private $db_exists = false;
+	private $db_exists = false;
 
     public static function Instance() {
         if (self::$inst === null) {

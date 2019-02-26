@@ -22,8 +22,6 @@ class Session {
             array($this, "_gc")
         );
         
-        
-
 		// Start the session
 		session_start();
     }
@@ -68,10 +66,7 @@ class Session {
         return true;
     }
     
-	public function _gc($max){
-        $fp = fopen('lidn.txt', 'w');
-        fwrite($fp, 'Cats chase mice');
-        fclose($fp);
-        return true;
-	}
+	// public function _gc($max){
+    //     return true;
+	// }
 }
