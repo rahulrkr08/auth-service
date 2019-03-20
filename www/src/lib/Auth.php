@@ -19,12 +19,12 @@ final class Auth {
     private function __construct() {
         
         $this->auth0 = new Auth0([
-            'domain'        => $_ENV['AUTH0_DOMAIN'] ?? 'avaazz.auth0.com',
-            'client_id'     => $_ENV['AUTH0_CLIENT_ID'] ?? 'sGRnbt7rujtTyhG4C7Sv0F3vDkinVjI3',
-            'client_secret' => $_ENV['AUTH0_CLIENT_SECRET'] ?? 'V9uiiL8V3TsfqSTwnbmc_6Hp0uKgKl-6qzVsUm0atc5eW4U5_ycHeCqUcQLFA2ix',
-            'redirect_uri'  => $_ENV['AUTH0_REDIRECT_URI'] ?? 'http://localhost/auth-service/public/verify',
-            'audience'      => $_ENV['AUTH0_AUDIENCE'] ?? 'https://avaazz.auth0.com/userinfo',
-            'scope'         => $_ENV['AUTH0_SCOPE'] ?? 'openid profile',
+            'domain'        => $_ENV['AUTH0_DOMAIN'],
+            'client_id'     => $_ENV['AUTH0_CLIENT_ID'],
+            'client_secret' => $_ENV['AUTH0_CLIENT_SECRET'],
+            'redirect_uri'  => $_ENV['AUTH0_REDIRECT_URI'],
+            'audience'      => $_ENV['AUTH0_AUDIENCE'],
+            'scope'         => $_ENV['AUTH0_SCOPE'],
             'persist_id_token' => true,
             'persist_access_token' => true,
             'persist_refresh_token' => true

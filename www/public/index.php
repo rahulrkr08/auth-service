@@ -5,7 +5,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require '../vendor/autoload.php';
 
-error_reporting(0); 
+error_reporting(0);
 
 include('../src/lib/SessionHandler.php');
 include('../src/lib/Auth.php');
